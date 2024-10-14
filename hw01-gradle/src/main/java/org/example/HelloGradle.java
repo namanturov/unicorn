@@ -4,7 +4,7 @@ import com.google.common.collect.Lists;
 
 import java.util.List;
 
-public class Main {
+public class HelloGradle {
     public static void main(String[] args) {
         go();
     }

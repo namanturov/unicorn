@@ -14,6 +14,12 @@ dependencies {
     implementation group: 'com.google.guava', name: 'guava', version: '33.3.1-jre'
 }
 
-test {
-    useJUnitPlatform()
+shadowJar {
+    archiveBaseName.set('gradleHelloWorld')
+    archiveVersion.set('0.1')
+    archiveClassifier.set('')
+    manifest {
+                attributes('Main-CLass': 'org.example.HelloGradle')
+            }
 }
+tasks.build.dependsOn tasks.shadowJar
